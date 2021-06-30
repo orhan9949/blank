@@ -1,0 +1,114 @@
+body {
+    background-color: yellowgreen;
+}
+
+.info_blank , .date_blank{
+    display: flex;
+    justify-content: flex-end;
+}
+.info_blank div{
+    width: 220px;
+}
+.info_blank div{
+    font-size: 20px;
+}
+
+.text_blank p:first-child{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 100px 0 50px 0;
+}
+.text_blank p , .date_blank p{
+    font-size: 20px;
+}
+
+.date_blank div{
+    width: 240px;
+    margin: 100px 0 0 0;
+}
+
+div#blank {
+    padding: 40px 20px;
+    max-width: 750px;
+    margin: 0 auto 50px;
+    background-color: #ffffff;
+}
+
+@media print {
+	.noprint {
+		display: none;
+	}
+}
+
+.setting-blank > div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.setting-blank > div:nth-child(1) p{
+    width: 100%;
+    text-align: center;
+}
+
+.setting-blank > div:nth-child(1) p:nth-child(1){
+    font-size: 20px;
+}
+
+.setting-blank > div:first-child input{
+    margin: 0 5px 0 0;
+}
+
+input {
+    margin: 0 5px 0 0;
+    padding: 5px;
+    /* border-radius: 10px; */
+    border: none;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.writen_dismissal , .writen_date{
+    text-align: center;
+    margin: 50px 0;
+}
+
+input:focus-visible{
+    outline: none;
+}
+
+.scaner a div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px #00000052;
+
+}
+
+.scaner a{
+    text-decoration: none;
+}
+
+.scaner {
+    display: flex;
+    justify-content: center;
+}
+
+.scaner a div {
+    fill: #ffffff;
+    transition: .2s ease-in-out;
+}
+.scaner a div svg {
+    transition: .2s ease-in-out;
+}
+
+.scaner a div:hover {
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}
+.scaner a div:hover svg {
+    transform: scale(0.7);
+    transition: .2s ease-in-out;
+}

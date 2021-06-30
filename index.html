@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+        <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="blank-blog">
+        <div id="blank">
+            <div class="info_blank">
+                <div>
+                    <p>Генеральному директору ООО &laquo;{{ name_company }} &raquo; <br>от {{ position }} {{ surname }} {{ name }} {{ patronymic }} </p>
+                </div>
+            </div>
+            <div class="text_blank">
+                <p>Заявление.</p>
+                <p>прошу уволить меня с занимаемой должности &laquo; {{ writen_dismissal_dd }} &raquo; {{ writen_dismissal_mm }} {{ writen_dismissal_yyyy }}года по собственному желанию в соответствии с пунктом 3 ст. 77 Трудового кодекса Российской Федерации.</p>
+            </div>
+            <div class="date_blank">
+                <div>
+                    <p>Дата &laquo;{{ writen_date_dd }} &raquo; {{ writen_date_mm }} {{ writen_date_yyyy }}г.</p>
+                    <p>Роспись _______________</p>
+                </div>
+            
+            </div>
+        </div>
+        <div id="setting-blank " class="noprint setting-blank">
+            
+            <div>
+                <p>Информация о себе</p>   
+                <p>ФИО и должность пишите в родительном падеже</p>
+                <input v-model="name_company" placeholder="Название фирмы">
+                <input v-model="name" placeholder="Имя">
+                <input v-model="surname" placeholder="Фамилия">
+                <input v-model="patronymic" placeholder="Отчество">
+                <input v-model="position" placeholder="Должность">
+            </div>
+               
+            
+            <div class="writen_dismissal">
+                <p>Дата увольнения</p>
+                <input type="number" v-model="writen_dismissal_dd" placeholder="число">
+                <input type="text" v-model="writen_dismissal_mm" placeholder="месяц">
+                <input type="number" v-model="writen_dismissal_yyyy" placeholder="год">
+            </div>
+            <div class="writen_date">
+                <p>Дата написания</p>
+                <input type="number" v-model="writen_date_dd" placeholder="число">
+                <input type="text" v-model="writen_date_mm" placeholder="месяц">
+                <input type="number" v-model="writen_date_yyyy" placeholder="год">
+            </div>
+        </div>
+        
+    </div>
+    <div class="scaner noprint">
+        <a class ="print-doc noprint" href="javascript:(print());"> 
+            <div>
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="80px" height="80px" viewBox="0 0 573.75 573.75" style="enable-background:new 0 0 573.75 573.75;"
+                        xml:space="preserve">
+                    <g>
+                        <g>
+                            <rect x="143.438" y="439.875" width="286.875" height="19.125"/>
+                            <rect x="143.438" y="497.25" width="286.875" height="19.125"/>
+                            <circle cx="449.438" cy="267.75" r="19.125"/>
+                            <path d="M506.812,172.125h-38.25V38.25c0-21.038-17.213-38.25-38.25-38.25H143.438c-21.038,0-38.25,17.212-38.25,38.25v133.875
+                                h-38.25c-32.513,0-57.375,24.862-57.375,57.375v172.125C9.562,434.138,34.425,459,66.938,459h38.25v76.5
+                                c0,21.037,17.212,38.25,38.25,38.25h286.875c21.037,0,38.25-17.213,38.25-38.25V459h38.25c32.513,0,57.375-24.862,57.375-57.375
+                                V229.5C564.188,196.987,539.325,172.125,506.812,172.125z M124.312,38.25c0-9.562,7.65-19.125,19.125-19.125h286.875
+                                c9.562,0,19.125,7.65,19.125,19.125v133.875H124.312V38.25z M449.438,535.5c0,9.562-7.65,19.125-19.125,19.125H143.438
+                                c-9.562,0-19.125-7.65-19.125-19.125V401.625h325.125V535.5z M545.062,401.625c0,21.037-17.213,38.25-38.25,38.25h-38.25V382.5
+                                H105.188v57.375h-38.25c-21.038,0-38.25-17.213-38.25-38.25V229.5c0-21.038,17.212-38.25,38.25-38.25h439.875
+                                c21.037,0,38.25,17.212,38.25,38.25V401.625z"/>
+                        </g>
+                    </g>
+
+                </svg>
+            </div>
+        </a>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
